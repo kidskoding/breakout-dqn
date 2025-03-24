@@ -1,6 +1,7 @@
 #include <iostream>
+#include <torch/serialize/input-archive.h>
 
-int main(int argc, char** argv) {
-    std::string str("test output");
-    std::cout << str << "\n";
+int main() {
+    torch::Tensor tensor = torch::rand({2, 3});
+    std::cout << tensor << std::endl;
 }
